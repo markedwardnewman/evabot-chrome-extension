@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<style>
+a.email {
+  display: none;
+}
+sup {
+  color: red;
+}
+label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+fieldset {
+display: block;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 0;
+    -webkit-padding-after: 0;
+    min-width: -webkit-min-content;
+    border-width: 0;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+}
+
+fieldset label {
+  margin-bottom: 8px;
+}
+</style>
+</head>
+<body>
+  <form id="gift_form" action="evabot.js" method="post">
+    <label for="gift_value">
+      <sup>*</sup>Gift value:
+      <br>
+      <select id="gift_value" name="gift_value">
+        <option value="0">--gift value--</option>
+        <option value="30">$30</option>
+        <option value="50">$50</option>
+      </select>
+    </label>
+
+    <label for="gift_receiver">
+      <sup>*</sup>Receiver's email:
+      <br>
+      <input id="gift_receiver" name="gift_receiver" type="email">
+    </label>
+
+    <label for="gift_message">
+      Message for receiver:
+      <br>
+      <textarea id="gift_message" name="gift_message" placeholder="A gift for you!"></textarea>
+    </label>
+
+    <fieldset>
+      <legend>Exclude these gift types:</legend>
+      <label><input id="gift_type_beer" name="gift_type_beer" type="checkbox">Beer</label>
+      <label><input id="gift_type_wine" name="gift_type_wine" type="checkbox" value="gift_type_wine">Wine</label>
+      <label><input id="gift_type_tea" name="gift_type_tea" type="checkbox" value="gift_type_tea">Tea</label>
+      <label><input id="gift_type_coffee" name="gift_type_coffee" type="checkbox" value="gift_type_coffee">Coffee</label>
+      <label><input id="gift_type_chocolate" name="gift_type_chocolate" type="checkbox" value="gift_type_chocolate">Chocolate</label>
+    </fieldset>
+    <br>
+    <input id="gift_submit" type="submit" value="Submit">
+  </form>
+
+<!--   
+  <p>
+    <button onclick="getData()">getData()</button>
+  </p>
+  <p>
+     Data:
+     <div>Name: <span id="user_name"></span>
+     </div>
+     <div>Email: <span id="user_email"></span>
+     </div>
+     <div>Excluded gifts:<br>
+       <span id="exclude_types"></span>
+     </div>
+  </p>
+-->
+  <div id="test1"></div>
+  <div id="test2"></div>
+  <div id="test3"></div>
+<script src="jquery-3.2.1.slim.min.js"></script>
+<script src="evabot.js"></script>
+</body>
+</html>
