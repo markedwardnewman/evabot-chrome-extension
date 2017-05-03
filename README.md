@@ -1,7 +1,7 @@
 # chrome.extension.evabot
 
 ### 5/03/2017 Notes
-- Basic working version. **Please provide feedback asap!**
+- Basic working version (without gift exclusions). **Please provide feedback asap!**
 - See **[here](https://developer.chrome.com/extensions/getstarted#unpacked)** for how to install a dev / local version of a chrome extension
 - Received API info on 5/01/2017
 - On 5/02/2017, the Send Gift API was reporting a success regardless of the tokenNumber being used. No email was received. A quick chat with Ashish fixed it.
