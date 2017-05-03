@@ -5,7 +5,8 @@
   "permissions": [
     "tabs",
     "webNavigation",
-    "*://*.google.com/*"
+    "*://*.google.com/*",
+    "storage"
    ],
   "background":{
     "scripts": ["background.js"]
