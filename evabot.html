@@ -2,6 +2,20 @@
 <html>
 <head>
 <style>
+body {
+  background-color: #f2f2f2;
+}
+.container {
+  //width: 370px;
+  text-align: left;
+}
+header {
+  padding: 16px;
+}
+header img {
+  width: 338px;
+  height: 155px;
+}
 a.email {
   display: none;
 }
@@ -11,113 +25,123 @@ sup {
 label {
   margin-bottom: 16px;
 }
-
 fieldset {
-display: block;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-    -webkit-padding-before: 0;
-    -webkit-padding-start: 0;
-    -webkit-padding-end: 0;
-    -webkit-padding-after: 0;
-    min-width: -webkit-min-content;
-    border-width: 0;
-    border-style: groove;
-    border-color: threedface;
-    border-image: initial;
+  display: block;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  min-width: -webkit-min-content;
+  border-width: 0;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
 }
-
 fieldset label {
   margin-bottom: 8px;
+}
+#post_message {
+  display: none;
 }
 </style>
 </head>
 <body>
-  <h3>User settings</h3>
-  Name: <span id="user_name_first"></span> <span id="user_name_last"></span>
-  <br>
-  Email: <span id="user_email"></span>
-  <br>
-  <br>
-  <label for="sender_name_first">
-    Sender's first name:
-    <input id="sender_name_first" name="sender_name_first" type="text">
-  </label>
-  <br>
-  <label for="sender_name_last">
-    Sender's last name:
-    <input id="sender_name_last" name="sender_name_last" type="text">
-  </label>
-  <br>
-  <label for="sender_email">
-    Sender's email:
-    <input id="sender_email" name="sender_email" type="email">
-  </label>
-  <br>
-  <br>
-  <br>
-  <button id="set_user_info">Save user info</button>
-  
-  <h3>Gift settings</h3>
-  <form id="gift_form" action="evabot.js" method="post">
-    <label for="receiver_name_first">
-      <sup>*</sup>Receiver's first name:
-      <input id="receiver_name_first" name="receiver_name_first" type="text">
-    </label>
-    <br>
-    <label for="receiver_name_last">
-      <sup>*</sup>Receiver's last name:
-      <input id="receiver_name_last" name="receiver_name_last" type="text">
-    </label>
-    <br>
-    <label for="receiver_email">
-      <sup>*</sup>Receiver's email:
-      <input id="receiver_email" name="receiver_email" type="email">
-    </label>
-    <br>
-    <br>
-    <br>
-    <label for="receiver_address">
-      Receiver's address:
+  <div class="container">
+    <header>
+      <a href="https://slack.vizzi.io/" target="_new"><img src="vlogo.png"></a>
+    </header>
+    <div class='content'>
+      <h3>User settings</h3>
+      Name: <span id="user_name_first"></span> <span id="user_name_last"></span>
       <br>
-      <textarea id="receiver_address" name="receiver_address" placeholder="Street #, Suite #, City, State, Zip"></textarea>
-    </label>
-    <br>
-    <br>
-    <br>
-    <label for="gift_value">
-      <sup>*</sup>Gift value:
+      Email: <span id="user_email"></span>
       <br>
-      <select id="gift_value" name="gift_value">
-        <option value="0">--gift value--</option>
-        <option value="30">$30</option>
-        <option value="50">$50</option>
-      </select>
-    </label>
-    <br>
-    <br>
-    <br>
-    <fieldset>
-      <legend>Exclude these gift types:</legend>
-      <label><input id="type_beer" name="type_beer" type="checkbox">Beer</label>
-      <label><input id="type_wine" name="type_wine" type="checkbox" value="type_wine">Wine</label>
-      <label><input id="type_tea" name="type_tea" type="checkbox" value="type_tea">Tea</label>
-      <label><input id="type_coffee" name="type_coffee" type="checkbox" value="type_coffee">Coffee</label>
-      <label><input id="type_chocolate" name="type_chocolate" type="checkbox" value="type_chocolate">Chocolate</label>
-    </fieldset>
-    <br>
-    <br>
-    <label for="gift_message">
-      Message for receiver:
       <br>
-      <textarea id="gift_message" name="gift_message" placeholder="A gift for you!"></textarea>
-    </label>
-    <br>
-    <br>
-    <br>
-    <input id="gift_submit" type="submit" value="Submit">
-  </form>
+      <label for="sender_name_first">
+        Sender's first name:
+        <input id="sender_name_first" name="sender_name_first" type="text">
+      </label>
+      <br>
+      <label for="sender_name_last">
+        Sender's last name:
+        <input id="sender_name_last" name="sender_name_last" type="text">
+      </label>
+      <br>
+      <label for="sender_email">
+        Sender's email:
+        <input id="sender_email" name="sender_email" type="email">
+      </label>
+      <br>
+      <br>
+      <br>
+      <button id="set_user_info">Save user info</button>
 
+      <h3>Gift settings</h3>
+      <form id="gift_form" action="evabot.js" method="post">
+        <label for="receiver_name_first">
+          <sup>*</sup>Receiver's first name:
+          <input id="receiver_name_first" name="receiver_name_first" type="text">
+        </label>
+        <br>
+        <label for="receiver_name_last">
+          <sup>*</sup>Receiver's last name:
+          <input id="receiver_name_last" name="receiver_name_last" type="text">
+        </label>
+        <br>
+        <label for="receiver_email">
+          <sup>*</sup>Receiver's email:
+          <input id="receiver_email" name="receiver_email" type="email">
+        </label>
+        <br>
+        <br>
+        <br>
+        <label for="receiver_address">
+          Receiver's address:
+          <br>
+          <textarea id="receiver_address" name="receiver_address" placeholder="Street #, Suite #, City, State, Zip"></textarea>
+        </label>
+        <br>
+        <br>
+        <br>
+        <label for="gift_value">
+          <sup>*</sup>Gift value:
+          <br>
+          <select id="gift_value" name="gift_value">
+            <option value="0">--gift value--</option>
+            <option value="30">$30</option>
+            <option value="50">$50</option>
+          </select>
+        </label>
+        <br>
+        <br>
+        <br>
+        <fieldset>
+          <legend>Exclude these gift types:</legend>
+          <label><input id="type_beer" name="type_beer" type="checkbox">Beer</label>
+          <label><input id="type_wine" name="type_wine" type="checkbox" value="type_wine">Wine</label>
+          <label><input id="type_tea" name="type_tea" type="checkbox" value="type_tea">Tea</label>
+          <label><input id="type_coffee" name="type_coffee" type="checkbox" value="type_coffee">Coffee</label>
+          <label><input id="type_chocolate" name="type_chocolate" type="checkbox" value="type_chocolate">Chocolate</label>
+        </fieldset>
+        <br>
+        <br>
+        <label for="gift_message">
+          Message for receiver:
+          <br>
+          <textarea id="gift_message" name="gift_message" placeholder="A gift for you!"></textarea>
+        </label>
+        <br>
+        <div id="post_message">
+          <p>
+          </p>
+        </div>
+        <br>
+        <input id="gift_submit" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
   <div id="test1"></div>
   <div id="test2"></div>
   <div id="test3"></div>

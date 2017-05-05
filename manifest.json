@@ -1,19 +1,16 @@
 {
   "name": "Chrome Extension - Evabot",
-  "description": "...",
+  "description": "A delightful way to reward your team with real gifts",
   "version": "1.0.0",  
   "permissions": [
-    "tabs",
     "webNavigation",
     "*://*.google.com/*",
     "storage"
    ],
-  "background":{
-    "scripts": ["background.js"]
-  },
   "browser_action": {
     "default_icon": "fab.png",
-    "default_title": "Evabot"
+    "default_title": "Evabot",
+    "default_popup": "evabot.html"
   },
   "manifest_version": 2
 }

@@ -113,19 +113,34 @@ function sendGift() {
     
     getTokenNumber(function(token_number) {
         //var API_url = 'https://api.evabot.ai/chrome/sendGift/1d4d0866-2ebf-11e7-91a5-124e76679be9/Mark+Newman/markedwardnewman%40gmail.com/Sending+you+a+gift/0/30/+/+'
-        var API_url = API_root + token_number + '/' + name + '/' + email + '/' + subject + '/' + packID + '/' + price + '/' + address + '/' + message;
+        //var API_url = API_root + token_number + '/' + name + '/' + email + '/' + subject + '/' + packID + '/' + price + '/' + address + '/' + message;
+        var API_url = API_root + token_number + '/' + name + '/' + email + '/' + subject + '/' + packID + '/' + price + '/' + (address == "" ? "+" : address) + '/' + (message == "" ? "+" : message);
         
         jQuery.ajax({
             url: API_url,
             method: 'GET',
             success: function() {
-                console.log('POST success!');
+                postSuccess();
+                
             },
             error:  function() {
-                console.log('POST error!');
+                postError();
+                
             }
         });
     });
+    
+    function postSuccess() {
+        console.log('POST success!');
+        $('#post_message').css('display','block');
+        $('#post_message p').text('Success! ' + receiver_info[0] + ' ' + receiver_info[1] + ' should be receiving an email very shortly with details on how to claim their gift.');
+    }
+    
+    function postError() {
+        console.log('POST error!');
+        $('#post_message').css('display','block');
+        $('#post_message p').text('Error! Please contact ...');      
+    }
 }
 
 
