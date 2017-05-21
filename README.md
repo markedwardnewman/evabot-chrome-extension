@@ -1,5 +1,20 @@
 # chrome.extension.evabot
 
+### 5/10/2017 - 5/21/2017Notes
+- Lots of researching Streak CRM, Nudge AI, and CoffeeSender, and how they integrate with Gmail
+- Lots of researching LinkedIn and Salesforce, and how they integrate with Gmail
+- Lots of testing with Gmail API and how to modify it
+- Current version installs an Eva icon automatically.
+  - Clicking that opens an options pop-up for turning on/off integration with  Gmail, Salesforce and LinkedIn (Yoinked from CoffeeSender).
+  - Any selections here will be saved in chrome's local storage.
+  - Enabling "Gmail" adds Eva integration to Gmail's banner (immediately to the right of the user's icon). It's currently linked to the Evabot demo as filler only.
+- KNOWN ISSUES:
+  - You must manually reload the page after enabling / disabling Gmail integration before any visual changes take place
+  - The script that adds Eva integration to Gmail's banner is on a SetTimeOut, so it takes a few seconds before showing up
+  - Previously working features will be reintegrated once all UI aspects have been approved
+  - Reverse-engineering Streak, Nudge AI, and CoffeeSender's Chrome extension's source code revealed entire teams dedicated to their gmail integrations. Please expect any Salesforce and / or LinkedIn integrations to occur once the Gmail verison is working as intended.
+  
+
 ### 5/05/2017 Notes
 - Basic working version 1.1
 - As per Ashish, made the extension a popup instead of a full page

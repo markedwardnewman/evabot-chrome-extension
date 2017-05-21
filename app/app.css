@@ -1,0 +1,48 @@
+.class_test1 {
+  color: pink;
+  background-color: purple;
+}
+
+.gb_eva_bg {
+  width: 30px;
+  height: 30px;
+  background-image: url('https://www.evabot.ai/wp-content/img/fab.png');
+  background-size: contain;
+  z-index: 1000;
+  opacity: .75;
+}
+
+.gb_eva_bg:hover {
+  opacity: 1;
+}
+
+.gb_eva {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+/* .str {
+  color: purple !important;
+} */
+
+/* .zE {
+  color: #efe4e4 !important;
+  background: rgba(189, 56, 56, 0.9) !important;
+} */
+
+/* gmail gb_gb gb_Wc gb_bg gb_R */
+/* .gb_R {
+  display: inline-block;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 main-size;
+  flex: 0 0 main-size;
+} */
+
+/* .gb_Wc {
+  display: inline-block;
+  padding: 0 0 0 15px;
+  vertical-align: middle;
+} */
+
+
