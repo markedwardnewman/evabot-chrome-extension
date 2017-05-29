@@ -1,5 +1,19 @@
 # chrome.extension.evabot
 
+### 5/22/2017 - 5/29/2017 Notes
+- Gmail will need to be reloaded after the extension has been installed.
+- I simplified the entire thing, completely doing away with the popup toggle feature. It was causing too many issues and was overly complex to begin with. 
+- The senders' first and last names are now automatically gathered via the user's primary gmail account. This greatly simplifies use, but issues will arise if the user's first and last name's don't match the values that are stored in Evabot's API.
+- When the extension is installed, it automatically puts a 'Send Gift!' button to the right of the Gmail 'settings' drop-down. It is currently using the exact same classes that Gmail is using for their 'compose' button.
+- The gift 'object' (created after the user clicks the modal's 'ok' button) contains gift exclusion values, but I don't currently see a way to pass that info to Evabot's API. Otherwise, all other requirements are passed. Please advise!
+- sender_message and receiver_address are both currently hidden/not-being-used. Just say the word and I'll add them to the modal.
+- PackID is currently set to 0. Not even sure what that is.
+- Unless otherwise requested, I'll do any styling modifications just prior to the production release
+- KNOWN ISSUES:
+  - none!, er, at least and as far as prototypes go!
+  - lots of goodie info found in console
+
+  
 ### 5/10/2017 - 5/21/2017Notes
 - Lots of researching Streak CRM, Nudge AI, and CoffeeSender, and how they integrate with Gmail
 - Lots of researching LinkedIn and Salesforce, and how they integrate with Gmail

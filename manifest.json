@@ -1,7 +1,7 @@
 {
-  "name": "Evabot",
+  "name": "Evabot 1.2",
   "description": "A delightful way to reward your team with real gifts",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "options_page": "options/options.html",
   "icons": { "128": "icon.png" },
   "browser_action": {
@@ -14,19 +14,22 @@
   },
   "permissions": [
     "activeTab",
-    "tabs", 
-    "http://*/*", 
-    "https://*/*"
+    "tabs"
+    //"http://*/*", 
+    //"https://*/*"
   ],
   "content_scripts": [
     {
       "matches": ["https://mail.google.com/*"],
-      "css": ["/app/app.css"]
+      //"css": ["app.css"],
+      "js": ["content.js"]
     }
   ],
   "web_accessible_resources": [
-    "utilities/*",
-    "gmail/*"
+    "jquery-3.2.1.min.js",
+    "gmail.js",
+    "main.js",
+    "options/options.js"
   ],
   "manifest_version": 2
 }
